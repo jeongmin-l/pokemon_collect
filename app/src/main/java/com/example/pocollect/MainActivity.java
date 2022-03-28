@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         pokemonGrid = findViewById(R.id.pokemon_Grid);
 
         pokemon_array = new Database().getPokemonList();
-        count.setText("김동주의 포켓몬 도감 : "+ trueCheckCount+"/"+pokemon_array.size());
+        count.setText("포켓몬 도감 : "+ trueCheckCount+"/"+pokemon_array.size());
 
         PokemonAdapter adapter = new PokemonAdapter(getApplicationContext(),pokemon_array);
         pokemonGrid.setAdapter(adapter);
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 trueCheckCount += adapter.change(i);
-                count.setText("김동주의 포켓몬 도감 : "+ trueCheckCount+"/"+pokemon_array.size());
+                count.setText("포켓몬 도감 : "+ trueCheckCount+"/"+pokemon_array.size());
                 adapter.notifyDataSetChanged();
             }
         });
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             }
             if (pref.contains("count")){
                 trueCheckCount = pref.getInt("count",-1);
-                count.setText("김동주의 포켓몬 도감 : "+ trueCheckCount+"/"+pokemon_array.size());
+                count.setText("포켓몬 도감 : "+ trueCheckCount+"/"+pokemon_array.size());
             }
             Log.d("불러오기", "saveState: ");
         }
