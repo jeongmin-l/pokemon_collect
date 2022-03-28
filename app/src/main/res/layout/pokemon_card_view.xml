@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:background="@drawable/corner_round"
+    android:orientation="vertical"
+    android:elevation="10dp"
+    android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/pokemon_number"
+            android:textSize="9sp"
+            android:text="no.1"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/pokemon_img"
+            android:src="@drawable/pigeonto"
+            android:layout_width="75dp"
+            android:layout_height="75dp"/>
+
+        <TextView
+            android:id="@+id/pokemon_name"
+            android:text="당구리 당당당"
+            android:textSize="10sp"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
